@@ -1,0 +1,138 @@
+﻿# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 点点时光
+subtitle: 点滴的踪迹
+description: 这里记录点点成长的轨迹，留下一份美好的记忆。
+keywords: 记录，生活
+author: larker
+language: zh-CN
+timezone:
+# email
+email: larker@foxmail.com
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://diandian.larkersos.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - README.md
+  - CNAME
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: falsehexo
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+#theme: landscape
+#theme: hexo-theme-Annie
+# 推荐
+# theme: hexo-theme-indigo
+#theme: hexo-theme-indigo-larkersos
+# theme: hexo-theme-next
+# butterfly不好用
+#theme: hexo-theme-butterfly
+#https://docs.nexmoe.com/
+# 推荐
+#theme: hexo-theme-nexmoe
+#https://github.com/ppoffice/hexo-theme-hueman.git
+#theme: hexo-theme-hueman
+# https://github.com/ITAbyss/hexo-wiki.git
+# theme: hexo-theme-wiki
+#theme: hexo-theme-matery
+# 推荐2
+theme: hexo-theme-matery
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  #repo:https://github.com/larkersos/hexo-hueman.git
+  # 部署到github
+  repository: https://github.com/larkersos/larkersos.github.io.git
+  branch: master # github分支
+
+#admin:
+# username: hexo
+# password_hash: $2a$10$7AxzcRmVnyjZ.J6sgiGNP.e1Nza4dPtDOd73GYDSEPah9DFwZ/eum
+# secret: 1623
+# deployCommand: 'hexo d'
+# hexo-admin authentification
+admin:
+  username: larkersos
+  password_hash: $2a$10$AZnWCRNZCRcqGzeTd3Viu.z7kk6O5lEQyuV.zocRstKfPTCteacay
+#   secret: 123456
+  deployCommand: 'D:\dev\github\source.larkersos.github.io\admin_script.bat'
